@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Titulo from '../components/titulo';
 import Separador from '../components/separador';
-import CardServicos from './card-servicos';
+import CardServicos from '../components/card-servicos';
 import { cardData } from '@/app/lib/data';
 
 const Servicos = () => {
