@@ -7,6 +7,7 @@ import Separador from '@/app/ui/components/separador';
 import { dataServicos } from './data';
 import Image from 'next/image';
 import Gallery from '@/app/ui/components/gallery';
+import OutrosServicos from '@/app/ui/components/outros-servicos';
 
 interface ParamsProps {
   params: {
@@ -87,7 +88,7 @@ const Page = ({ params }: ParamsProps) => {
       <div className='w-maxW max-w-hd grande:max-w-grande mt-16'>
         <h3 className=' mb-4'>Galeria</h3>
         <Separador />
-        <Gallery section={section}/>
+        <Gallery section={section} />
       </div>
 
       <div className='w-full bg-blue-default flex justify-center py-16 mt-16'>
@@ -95,6 +96,7 @@ const Page = ({ params }: ParamsProps) => {
           <div className='flex flex-col gap-4'>
             <h3 className='text-[white]'>Veja outros serviços</h3>
             <Separador />
+            <OutrosServicos data={dataServicos} id={section.id} section='servicos'/>
           </div>
          
         </div>
