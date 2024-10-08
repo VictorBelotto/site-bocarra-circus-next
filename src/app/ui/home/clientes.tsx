@@ -3,16 +3,10 @@
 
 import { motion } from 'framer-motion'
 import Titulo from '../components/titulo'
+import { geraLinks } from '@/app/lib/utils'
 
 
-function geraLinks( link : string, quantidade : number){
-  const array = []
 
-  for(let i = 1; i <= quantidade; i++){
-    array.push(`${link}${i}.webp`)
-  }
-  return array
-}
 
 const logos = geraLinks('/logos_clientes/', 8)
 
