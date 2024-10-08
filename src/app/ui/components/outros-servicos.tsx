@@ -12,7 +12,6 @@ const OutrosServicos = ({data, section, id } : {section : string, data : Section
 
   const filteredSectionsData = data.filter(data => data.id !== id);
 
-  const link = section === 'servicos' ? `/servicos/` : `/circo/`
 
   const container = {
     hidden: { opacity: 0, scale: 0, },
@@ -70,7 +69,7 @@ const OutrosServicos = ({data, section, id } : {section : string, data : Section
             className='f-carousel__slide f-carousel-slide-other overflow-hidden group'
             variants={item}
           >
-            <Link href={`${link}${data.id}`} className='flex flex-col w-fit justify-center'>
+            <Link href={`${section === 'circo' ? `/servicos/circo/${data.id}` : `/servicos/${data.id}`}`} className='flex flex-col w-fit justify-center'>
               <Image
                 src={data.imagens[0]}
                 alt={data.id}

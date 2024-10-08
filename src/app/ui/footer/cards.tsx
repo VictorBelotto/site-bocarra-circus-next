@@ -20,7 +20,7 @@ const Cards = ({titulo, label, to, classe} : CardProps) => {
         <h4 className='mt-3' >{titulo}</h4>
           <p className='text-white-contraste text-base'>{label}</p>
           
-          <Image src='icons/arrowRed.svg' alt='Flecha' className='w-10 mt-auto transition-transform duration-300 ease-in-out transform group-hover:translate-x-4' width={40} height={40}/>
+          <Image src='/icons/arrowRed.svg' alt='Flecha' className='w-10 mt-auto transition-transform duration-300 ease-in-out transform group-hover:translate-x-4' width={40} height={40}/>
         </div>
       </Link>
     </div>

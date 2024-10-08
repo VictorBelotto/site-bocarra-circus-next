@@ -4,11 +4,11 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import { Fancybox } from '@fancyapps/ui';
 import { motion } from 'framer-motion';
 import Separador from '@/app/ui/components/separador';
-import { dataServicos } from './data';
+import { dataServicos } from '../../[name]/data';
 import Image from 'next/image';
 import Gallery from '@/app/ui/components/gallery';
 import OutrosServicos from '@/app/ui/components/outros-servicos';
-import { dataCirco } from '../circo/[name]/data-circo';
+import { dataCirco } from './data-circo';
 
 interface ParamsProps {
   params: {
@@ -33,7 +33,7 @@ const Page = ({ params }: ParamsProps) => {
     visible: { y: ['100%', 0], opacity: 1, transition: { duration: 0.5 } },
   };
 
-  const section = dataServicos.find((servico) => servico.id === params.name);
+  const section = dataCirco.find((servico) => servico.id === params.name);
 
   useEffect(() => {
     Fancybox.bind('[data-fancybox="gallery"]', {
@@ -53,7 +53,7 @@ const Page = ({ params }: ParamsProps) => {
 
   return (
     <motion.main
-      className='flex flex-col w-full justify-center items-center pb-32'
+      className='flex flex-col w-full justify-center items-center pb-16'
       key={section.id}
     >
       <motion.div
@@ -105,12 +105,18 @@ const Page = ({ params }: ParamsProps) => {
       <div className='w-full bg-blue-default flex justify-center py-16 mt-16'>
         <div className='w-maxW max-w-hd grande:max-w-grande'>
           <div className='flex flex-col gap-4'>
-            <h3 className='text-[white]'>Veja outros serviços</h3>
+            <h3 className='text-[white]'>Veja outros modelos de Circo</h3>
             <Separador />
-            <OutrosServicos data={dataServicos} id={section.id} section='servicos' />
+            <OutrosServicos data={dataCirco} id={section.id} section='circo' />
           </div>
-
         </div>
+      </div>
+      <div className='w-maxW max-w-hd grande:max-w-grande py-16'>
+        <div className='flex flex-col gap-4'>
+          <h3 className='text-red-default'>Veja outros serviços</h3>
+          <Separador />
+        </div>
+        <OutrosServicos data={dataServicos} id={section.id} section='servicos' />
       </div>
     </motion.main>
   );
