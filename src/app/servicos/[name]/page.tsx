@@ -8,6 +8,7 @@ import { dataServicos } from './data';
 import Image from 'next/image';
 import Gallery from '@/app/ui/components/gallery';
 import OutrosServicos from '@/app/ui/components/outros-servicos';
+import { dataCirco } from './data-circo';
 
 interface ParamsProps {
   params: {
@@ -52,7 +53,7 @@ const Page = ({ params }: ParamsProps) => {
 
   return (
     <motion.main
-      className='flex flex-col w-full justify-center items-center pb-32'
+      className='flex flex-col w-full justify-center items-center'
       key={section.id}
     >
       <motion.div
@@ -77,7 +78,7 @@ const Page = ({ params }: ParamsProps) => {
           width={1920}
           height={1080}
         />
-        
+
         <div className='w-maxW max-w-hd grande:max-w-grande mt-3 md:mt-6'>
           <motion.p className='max-w-[1000px] text-white-contraste text-lg sm:text-2xl' variants={itemY}>
             {section.descricao}
@@ -89,16 +90,27 @@ const Page = ({ params }: ParamsProps) => {
         <h3 className=' mb-4'>Galeria</h3>
         <Separador />
         <Gallery section={section} />
+
+        {section.id === 'circo' && (
+          <>
+            <div className='flex flex-col gap-4 mt-16'>
+              <h3 className='text-red-default'>Veja os modelos de Circo</h3>
+              <Separador />
+            </div>
+            <OutrosServicos data={dataCirco} id={section.id} section='circo' />
+          </>
+        )}
       </div>
 
-      <div className='w-full bg-blue-default flex justify-center py-16 mt-16'>
+      <div className='w-full bg-blue-default flex justify-center pt-16 pb-32 mt-16'>
         <div className='w-maxW max-w-hd grande:max-w-grande'>
           <div className='flex flex-col gap-4'>
             <h3 className='text-[white]'>Veja outros serviços</h3>
             <Separador />
-            <OutrosServicos data={dataServicos} id={section.id} section='servicos'/>
+            <OutrosServicos data={dataServicos} id={section.id} section='servicos' />
+            <Separador />
           </div>
-         
+
         </div>
       </div>
     </motion.main>
