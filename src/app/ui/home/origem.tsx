@@ -25,7 +25,7 @@ const Origem = () => {
 
   return (
     <motion.section
-      className=' flex flex-col w-maxW max-w-hd grande:max-w-grande items-center pb-16 overflow-hidden'
+      className=' flex flex-col w-maxW max-w-hd grande:max-w-grande items-center py-16 overflow-hidden'
       variants={container}
       initial="hidden"
       whileInView="visible"

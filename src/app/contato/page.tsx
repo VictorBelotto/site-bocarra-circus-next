@@ -49,7 +49,7 @@ const Page = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className='w-maxW  max-w-hd grande:max-w-grande h-[600px] lg:h-[600px] bg-white-contraste' >
-          <Image className='w-full h-[600px] hidden lg:block'  src='/servicos_banner/banner-contatos-desktop.webp' alt="Banner images" width={1600} height={800}/>
+          <Image className='w-full h-[600px] hidden lg:block'  src='/servicos_banner/banner-contatos-desktop.webp' alt="Banner images" width={1900} height={1000}/>
           <Image className='w-full h-[600px]  md:hidden'  src='/servicos_banner/banner-contatos-mobile.webp' alt="Banner images" width={1023} height={676}/>
           <Image className='w-full h-[600px] hidden md:block lg:hidden'  src='/servicos_banner/banner-contatos-tablet.webp' alt="Banner images" width={921} height={1689}/>
         </div>

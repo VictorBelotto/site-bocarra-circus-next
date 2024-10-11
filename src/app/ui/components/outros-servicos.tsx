@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { Carousel } from "@fancyapps/ui/dist/carousel/carousel.esm.js";
+import { Carousel } from '@fancyapps/ui'; 
 import "@fancyapps/ui/dist/carousel/carousel.css";
-
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -42,6 +41,7 @@ const OutrosServicos = ({data, section, id } : {section : string, data : Section
       },
       Navigation: true,
     }
+    
     const carousel = new Carousel(carouselRef.current, options, {
     })
 
