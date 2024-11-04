@@ -15,7 +15,6 @@ const geistMono = localFont({
 });
 
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,14 +23,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="icon" type="image/png" sizes="48x48" href="/bocarra_visual/logoRed.png"/>
+        <link rel="icon" type="image/png" sizes="48x48" href="/bocarra_visual/logoRed.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-screen overflow-x-hidden`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

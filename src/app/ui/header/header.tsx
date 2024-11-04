@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Nav from './nav';
 import Logo from './logo';
+import SideBar from './sideBar';
 
 const Header = () => {
 
@@ -12,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-screen'>
       <div className={`w-full z-20 bg-transparent absolute bg-blue-300 top-0`}>
         <motion.header
           className={`flex w-full justify-center `}
@@ -22,7 +23,8 @@ const Header = () => {
         >
           <div className='flex w-maxW max-w-hd grande:max-w-grande py-2 justify-between items-center relative'>
             <Logo />
-             <Nav />
+            
+            {(window.innerWidth > 962) ? <Nav/> : <SideBar/>}
           </div>
         </motion.header>
       </div>

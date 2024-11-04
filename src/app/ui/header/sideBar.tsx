@@ -5,10 +5,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../../../public/bocarra_visual/Est1B.svg'
+import Links from "./links";
+import { usePathname } from "next/navigation";
 
-const MenuSideBar = () => {
+
+
+const SideBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrollEnabled, setIsScrollEnabled] = useState(true);
+  const location = usePathname();
 
   const item = {
     hidden: { x: "100vw", transition: { duration: 0.3, ease: "linear" } },
@@ -36,7 +41,6 @@ const MenuSideBar = () => {
   }, [isDrawerOpen]);
 
 
-  /*  const location = usePathname(); */
   const toggleMenu = () => {
     setIsDrawerOpen(!isDrawerOpen)
   }
@@ -46,7 +50,6 @@ const MenuSideBar = () => {
     <div className="flex relative">
       <div className="z-50">
         <Hamburger toggled={isDrawerOpen} toggle={toggleMenu} color="white" />
-
       </div>
       <AnimatePresence>
         <motion.div
@@ -60,10 +63,9 @@ const MenuSideBar = () => {
 
             </div>
             <div className="p-0 flex flex-col h-fit  gap-4 mt-4">
-              {/*  <Links onClick={toggleMenu} to="" label="Home" local={location} />
+              <Links onClick={toggleMenu} to="" label="Home" local={location} />
               <Links onClick={toggleMenu} to="servicos" label="Serviços" local={location} />
-                  <Links onClick={toggleMenu} to="sobre" label="Sobre Nós" local={location} /> 
-              <Links onClick={toggleMenu} to="contato" label="Contato" local={location} />*/}
+              <Links onClick={toggleMenu} to="contato" label="Contato" local={location} />
             </div>
             <div className="mt-auto flex justify-center">
               <Link href="/" onClick={toggleMenu} className="flex w-full justify-end">
@@ -82,4 +84,4 @@ const MenuSideBar = () => {
   );
 };
 
-export default MenuSideBar;
+export default SideBar;
