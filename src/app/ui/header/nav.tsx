@@ -55,7 +55,7 @@ const Nav = () => {
 
   return (
     <motion.nav
-      className='titlesFont text-xl font-medium'
+      className='titlesFont text-xl font-medium md:hidden'
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -73,12 +73,6 @@ const Nav = () => {
             <Link href={'/servicos'}>Serviços</Link>
           </motion.div>
         </li>
-
-    {/*     <li className='hover:text-red-default overflow-hidden'>
-          <motion.div variants={item}>
-            <Link to={'/sobre'}>Sobre Nós</Link>
-          </motion.div>
-        </li> */}
 
         <li className='relative'>
           <motion.div
