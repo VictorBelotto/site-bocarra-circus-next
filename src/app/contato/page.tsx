@@ -1,63 +1,27 @@
-'use client'
 import React from 'react'
-import Endereco from '../ui/contato/endereco'
-import Separador from '../ui/components/separador'
-import { motion } from 'framer-motion' 
-import Formulario from '../ui/contato/formulario'
-import Image from 'next/image'
+import PageContato from '../ui/contato/page-contato'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Entre em contato",
+  description: "Tem um projeto em mente? Ou está curioso sobre nossos serviços? Entre em contato conosco e vamos explorar suas ideias juntos!",
+  keywords: ['Circo', 'Lonas', 'Bocarra Circus', 'bocarra contato', 'contato bocarra circus', 'bocarra circus site', 'bocarra',' circus brasil', 'fabricante de lonas', 'fabricante de circo'] ,
+  authors: [{ name: "Bocarra Circus" }],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.bocarracircus.com/contato',
+    title: 'Contato - Bocarra Circus',
+    description: 'Entre em contato - Bocarra Circus',
+  },
+  alternates: {
+    canonical: 'https://www.bocarracircus.com/contato',
+  },
+};
 
 const Page = () => {
-  const container = {
-    hidden: { opacity: 1 },
-    visible: {
-      transition: {
-        delayChildren: 0.35,
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemY = {
-    hidden: { y: '200%', opacity: 0 },
-    visible: { y: ['100%', 0], opacity: 1, transition: { duration: 0.5 } },
-  };
-
   return (
-    <section className='flex flex-col pb-32 items-center'>
-       <motion.div
-        className='w-full pt-32 bg-blue-default flex flex-col items-center min-h-screen'
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="w-maxW max-w-hd grande:max-w-grande">
-          <Separador />
-          <motion.h2 className='text-[white] mb-8 md:mb-16 lg:mb-8 ' variants={itemY}>Fale conosco</motion.h2>
-          <motion.p className='max-w-[1000px] text-white-contraste text-xl sm:text-2xl' variants={itemY}>
-            Estamos aqui para ajudar! Quer saber mais sobre nossos produtos e serviços? Preencha o formulário abaixo ou mande uma mensagem via Whatsapp. Nossa equipe responderá o mais rápido possível.
-          </motion.p>
-
-        </div>
-      </motion.div>
-
-      <motion.div
-        className='py-16 w-full flex justify-center items-center relative'
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className='w-maxW  max-w-hd grande:max-w-grande h-[600px] lg:h-[600px] bg-white-contraste' >
-          <Image className='w-full h-[600px] hidden lg:block'  src='/servicos_banner/banner-contatos-desktop.webp' alt="Banner images" width={1900} height={1000}/>
-          <Image className='w-full h-[600px]  md:hidden'  src='/servicos_banner/banner-contatos-mobile.webp' alt="Banner images" width={1023} height={676}/>
-          <Image className='w-full h-[600px] hidden md:block lg:hidden'  src='/servicos_banner/banner-contatos-tablet.webp' alt="Banner images" width={921} height={1689}/>
-        </div>
-      </motion.div>
-
-      <Formulario/>
-      <Endereco/>
-    </section>
+    <PageContato />
   )
 }
 
