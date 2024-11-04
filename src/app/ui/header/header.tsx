@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Nav from './nav';
 import Logo from './logo';
-import MenuSideBar from './sideBar';
 
 const Header = () => {
 
