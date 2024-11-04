@@ -23,7 +23,6 @@ const Header = () => {
         >
           <div className='flex w-maxW max-w-hd grande:max-w-grande py-2 justify-between items-center relative'>
             <Logo />
-            
             <Nav/> 
             <SideBar/>
           </div>

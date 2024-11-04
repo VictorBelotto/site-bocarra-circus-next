@@ -47,7 +47,7 @@ const SideBar = () => {
 
 
   return (
-    <aside className="flex relative lg:hidden">
+    <aside className="relative flex lg:hidden">
       <div className="z-50">
         <Hamburger toggled={isDrawerOpen} toggle={toggleMenu} color="white" />
       </div>

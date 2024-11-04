@@ -55,7 +55,7 @@ const Nav = () => {
 
   return (
     <motion.nav
-      className='titlesFont text-xl font-medium md:hidden'
+      className='titlesFont text-xl font-medium hidden lg:flex'
       variants={container}
       initial="hidden"
       whileInView="visible"
