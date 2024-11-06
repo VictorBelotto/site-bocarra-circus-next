@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./ui/globals.css";
 import Header from "./ui/header/header";
 import Footer from "./ui/footer/footer";
+import Transition from "./ui/components/transition";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,9 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col w-screen overflow-x-hidden`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <Transition>
+          <Header />
+          {children}
+          <Footer />
+        </Transition>
+
       </body>
     </html>
   );

@@ -63,7 +63,7 @@ const SideBar = () => {
 
             </div>
             <div className="p-0 flex flex-col h-fit  gap-4 mt-4">
-              <Links onClick={toggleMenu} to="" label="Home" local={location} />
+              <Links onClick={toggleMenu} to="/" label="Home" local={location} />
               <Links onClick={toggleMenu} to="servicos" label="Serviços" local={location} />
               <Links onClick={toggleMenu} to="contato" label="Contato" local={location} />
             </div>

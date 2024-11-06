@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Entre em contato",
   description: "Tem um projeto em mente? Ou está curioso sobre nossos serviços? Entre em contato conosco e vamos explorar suas ideias juntos!",
-  keywords: ['Circo', 'Lonas', 'Bocarra Circus', 'bocarra contato', 'contato bocarra circus', 'bocarra circus site', 'bocarra',' circus brasil', 'fabricante de lonas', 'fabricante de circo'] ,
+  keywords: ['Circo', 'Lonas', 'Bocarra Circus', 'bocarra contato', 'contato bocarra circus', 'bocarra circus site', 'bocarra',' circus brasil', 'fabricante de lonas', 'fabricante de circo', "Entre em contato"] ,
   authors: [{ name: "Bocarra Circus" }],
   robots: { index: true, follow: true },
   openGraph: {

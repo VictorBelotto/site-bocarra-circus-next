@@ -5,12 +5,7 @@ export const metadata: Metadata = {
   title: "Veja nossos serviços",
   description: "Na Bocarra Circus, oferecemos soluções personalizadas em coberturas têxteis, combinando tradição e inovação para atender às necessidades únicas de cada cliente.",
   keywords: [
-    "Circo",
-    "Lonas",
-    "Bocarra Circus",
-    "fabricante de lonas",
-    "serviços",
-    "servicos"
+    "Circo", "Lonas", "Bocarra Circus", "fabricante de lonas", "serviços", "servicos", "Tendas", "Tendas piramidais", "aluguel de tendas", "Galpoes", "Galpao de lona", "lona de circo","Lonas sob medida", "Lona para eventos", "lonas de circo brasil", "Evento", "Lona personalizada", "Fabricaçao de lona"
   ],
   authors: [{name: 'Victor Belotto'}],
   robots: "index, follow",
