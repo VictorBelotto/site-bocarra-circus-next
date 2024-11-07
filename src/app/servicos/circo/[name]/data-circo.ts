@@ -3,7 +3,7 @@ import { geraLinks } from '@/app/lib/utils';
 const images_4bicos = geraLinks('/imagens_modelos_circo/4bicos/', 20)
 const images_cupula_redonda = geraLinks('/imagens_modelos_circo/cupula_redonda/', 31)
 const images_mastareus = geraLinks('/imagens_modelos_circo/mastareus/', 17)
-const images_tradicional = geraLinks('/imagens_modelos_circo/tradicional/', 14)
+const images_tradicional = geraLinks('/imagens_modelos_circo/tradicional/', 16)
 
 export const dataCirco = [
   {

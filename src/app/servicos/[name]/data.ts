@@ -1,6 +1,6 @@
 import { geraLinks } from '@/app/lib/utils';
 
-const imagesCirco = geraLinks('/imagens_circos/', 26)
+const imagesCirco = geraLinks('/imagens_circos/', 30)
 const imagesAranha = geraLinks('/imagens_aranha/', 9)
 const imagesExclusiva = geraLinks('/imagens_exclusivas/', 25)
 const imagesGalpao = geraLinks('/imagens_galpao/', 12)
